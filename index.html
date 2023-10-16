@@ -51,7 +51,7 @@
     <!-- header section start -->
     <header class="home-section">
       <nav
-        class="navbar navbar-expand-lg fixed-top"
+        class="navbar navbar-expand-lg"
         id="navbar"
       >
         <div class="container-fluid">
@@ -156,15 +156,10 @@
 
       <!-- home content -->
       <section
-        class="home d-flex flex-wrap align-items-center justify-content-center position-relative z-0"
-        style="font-family: 'Roboto Slab', serif"
-      >
-        <div
-          class="content"
-          style="flex: 1 1 400px; margin-top: 150px"
-        >
+        class="home">
+        <div class="content">
           <h1>Rasa Nusantara <br /><span>Rujak</span></h1>
-          <p style="margin-left: 42px; color: white">Kami menjadikan setiap gigitan rujak kami sebagai perpaduan citra rasa yang memukau, menghadirkan kelezatan khas yang menggoda lidah Anda.</p>
+          <p>Kami menjadikan setiap gigitan rujak kami sebagai perpaduan cita rasa yang memukau, menghadirkan kelezatan khas yang menggoda lidah Anda.</p>
           <div
             id="btn"
             style="margin-left: 42px"
@@ -269,16 +264,22 @@
     >
       <div class="row">
         <div class="col-md-6 py-3 py-md-0">
-          <div class="card" data-nama="Rujak Cingur" data-harga="16000" data-gambar="https://www.indonesia.travel/content/dam/indtravelrevamp/en/trip-ideas/indonesian-rujak/6.jpg">
+          <div
+            class="card"
+            data-nama="Rujak Cingur"
+            data-harga="16000"
+            data-gambar="https://www.indonesia.travel/content/dam/indtravelrevamp/en/trip-ideas/indonesian-rujak/6.jpg"
+          >
             <img
               src="https://www.indonesia.travel/content/dam/indtravelrevamp/en/trip-ideas/indonesian-rujak/6.jpg"
               alt="rujak cingur"
             />
-            <div class="card-img-overlay" >
+            <div class="card-img-overlay">
               <h3>Rujak Cingur</h3>
               <p>rujak cingur khas Surabaya dengan pelengkap lainnya yang terdiri dari buah dan sayur, seperti mentimun, bengkoang, tauge, kangkung, dan kacang-kacangan</p>
               <button
-                id="tombol" class="pesan-button"
+                id="tombol"
+                class="pesan-button"
                 type="button"
                 data-bs-toggle="modal"
                 data-bs-target="#exampleModal"
@@ -985,14 +986,16 @@
           <div class="modal-body">
             <div class="row">
               <div class="col-md-6 py-3 py-md-0">
-                <h3 class="mt-2" id="modal-nama-produk"></h3>
+                <h3
+                  class="mt-2"
+                  id="modal-nama-produk"
+                ></h3>
                 <div class="card">
                   <img
                     id="modal-gambar-produk"
                     src=""
                     alt=""
                   />
-                 
                 </div>
               </div>
               <div class="col-md-6 py-3 py-md-0">
@@ -1023,11 +1026,35 @@
                     ></textarea>
                   </div>
                   <div class="mb-3">
-                    <label for="examplequantity" class="form-label">Quantity Pesanan</label>
-                    <div class="input-group" style="width: 200px;">
-                      <button class="btn btn-outline-secondary" type="button" id="decrementButton">-</button>
-                      <input type="number" class="form-control text-center" id="examplequantity" value="0">
-                      <button class="btn btn-outline-secondary" type="button" id="incrementButton">+</button>
+                    <label
+                      for="examplequantity"
+                      class="form-label"
+                      >Quantity Pesanan</label
+                    >
+                    <div
+                      class="input-group"
+                      style="width: 200px"
+                    >
+                      <button
+                        class="btn btn-outline-secondary"
+                        type="button"
+                        id="decrementButton"
+                      >
+                        -
+                      </button>
+                      <input
+                        type="number"
+                        class="form-control text-center"
+                        id="examplequantity"
+                        value="0"
+                      />
+                      <button
+                        class="btn btn-outline-secondary"
+                        type="button"
+                        id="incrementButton"
+                      >
+                        +
+                      </button>
                     </div>
                   </div>
                   <div class="mb-3">
@@ -1040,7 +1067,10 @@
                   </div>
                   <div class="mb-3">
                     <label for="">Total Harga</label>
-                    <h3 class="mt-2" id="modal-harga-produk"></h3>
+                    <h3
+                      class="mt-2"
+                      id="modal-harga-produk"
+                    ></h3>
                   </div>
                 </form>
               </div>
