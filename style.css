@@ -592,11 +592,7 @@
 }
 
 /* media query */
-/* @media (max-width: 1060px) {
-  .post-container {
-    max-width: 700px; 
-}
-} */
+
 @media screen and (max-width :800px){
   .post-container{
       margin: 0 auto;
@@ -605,6 +601,9 @@
 }
 
 @media screen and (max-width :768px){
+  .header-content{
+      margin-top: 3rem !important;
+  }
   .header-title{
       font-size: 2rem;
   }
@@ -616,6 +615,7 @@
   .post-header{
       height: 435px;
   }
+
   .post-content{
       margin-top: 9rem !important;
   }
@@ -634,7 +634,6 @@
   .header-img{
       height: 340px;
   }
-
 }
 
 
@@ -657,6 +656,7 @@
       margin: 10px 0;
   }
 }
+
 
 
 /* @media (max-width: 800px) {
