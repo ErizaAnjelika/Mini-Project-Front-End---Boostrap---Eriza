@@ -7,6 +7,11 @@
       content="width=device-width, initial-scale=1.0"
     />
     <title>Website Kuliner</title>
+    <!-- Aos Animasi -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/aos@next/dist/aos.css"
+    />
     <!-- Font family -->
     <link
       rel="preconnect"
@@ -54,7 +59,7 @@
         class="navbar navbar-expand-lg fixed-top"
         id="navbar"
       >
-        <div class="container-fluid">
+        <div class="container">
           <a
             class="navbar-brand"
             href="#"
@@ -155,11 +160,11 @@
       </nav>
 
       <!-- home content -->
-      <section
-        class="home">
-        <div class="content">
+      <section class="home container">
+        <div class="content ">
           <h1>Rasa Nusantara <br /><span>Rujak</span></h1>
-          <p>Kami menjadikan setiap gigitan rujak kami sebagai perpaduan cita rasa yang memukau, menghadirkan kelezatan khas yang menggoda lidah Anda.</p>
+          <p>Kami menjadikan setiap gigitan rujak kami sebagai perpaduan 
+            cita rasa yang memukau, menghadirkan kelezatan khas yang menggoda lidah</p>
           <div
             id="btn"
             style="margin-left: 42px"
@@ -191,7 +196,10 @@
     >
       <h1>TENTANG KAMI</h1>
       <div class="row">
-        <div class="col-md-6 py-3 py-md-0">
+        <div
+          class="col-md-6 py-3 py-md-0"
+          data-aos="fade-right" data-aos-duration="1000"
+        >
           <div class="card">
             <img
               src="img/banner3.jpg"
@@ -199,7 +207,10 @@
             />
           </div>
         </div>
-        <div class="col-md-6 py-3 py-md-0">
+        <div
+          class="col-md-6 py-3 py-md-0"
+          data-aos="fade-right" data-aos-duration="1500" data-aos-delay="200" 
+        >
           <h2>Rasa Nusantara Rujak</h2>
           <p>
             Rasa Nusantara Rujak adalah destinasi kuliner yang menghadirkan kelezatan khas Indonesia dalam setiap piring rujak. Kami mengajak Anda untuk menjelajahi ragam cita rasa nusantara dengan sajian rujak segar yang dipadu dengan
@@ -219,37 +230,37 @@
       id="top-icons"
       style="margin-top: 50px; padding-top: 5rem"
     >
-      <h1 class="text-center fw-bold">PENAWARAN</h1>
+      <h1 class="text-center fw-bold" >PENAWARAN</h1>
       <div class="row">
-        <div class="col-md-3 py-3 py-md-0">
+        <div class="col-md-3 py-3 py-md-0" data-aos="zoom-in-right" data-aos-duration="500">
           <i
             ><img
               src="img/50.png"
-              alt="gambar rujak"
+              alt="gambar diskon"
           /></i>
           <h3>Rujak diskon 50%</h3>
         </div>
-        <div class="col-md-3 py-3 py-md-0">
+        <div class="col-md-3 py-3 py-md-0" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="50" >
           <i
             ><img
               src="img/fast-delivery.png"
-              alt="gambar rujak"
+              alt="gambar delivery"
           /></i>
           <h3>Pengiriman gratis</h3>
         </div>
-        <div class="col-md-3 py-3 py-md-0">
+        <div class="col-md-3 py-3 py-md-0" data-aos="zoom-in-right" data-aos-duration="1500" data-aos-delay="100" >
           <i
             ><img
               src="img/water-bottle.png"
-              alt="gambar rujak"
+              alt="gambar botol"
           /></i>
           <h3>Gratis air mineral</h3>
         </div>
-        <div class="col-md-3 py-3 py-md-0">
+        <div class="col-md-3 py-3 py-md-0" data-aos="zoom-in-right" data-aos-duration="2000" data-aos-delay="150" >
           <i
             ><img
               src="img/chips.png"
-              alt="gambar rujak"
+              alt="gambar snack"
           /></i>
           <h3>Gratis snack</h3>
         </div>
@@ -263,7 +274,7 @@
       id="cards"
     >
       <div class="row">
-        <div class="col-md-6 py-3 py-md-0">
+        <div class="col-md-6 py-3 py-md-0" data-aos="flip-left" data-aos-duration="500" >
           <div
             class="card"
             data-nama="Rujak Cingur"
@@ -289,8 +300,13 @@
             </div>
           </div>
         </div>
-        <div class="col-md-6 py-3 py-md-0">
-          <div class="card">
+        <div class="col-md-6 py-3 py-md-0" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="50">
+          <div
+            class="card"
+            data-nama="Rujak Kuah Pindang"
+            data-harga="10000"
+            data-gambar="https://www.indonesia.travel/content/dam/indtravelrevamp/en/trip-ideas/indonesian-rujak/9.jpg"
+          >
             <img
               src="https://www.indonesia.travel/content/dam/indtravelrevamp/en/trip-ideas/indonesian-rujak/9.jpg"
               alt="rujak bali"
@@ -298,7 +314,15 @@
             <div class="card-img-overlay">
               <h3>Rujak Kuah Pindang Bali</h3>
               <p>Rujak kuah pindang terdiri dari berbagai irisan buah, seperti mangga hijau, pepaya, jeruk bali, dan kedondong</p>
-              <button id="tombol">Pesan</button>
+              <button
+                id="tombol"
+                class="pesan-button"
+                type="button"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+              >
+                Pesan
+              </button>
             </div>
           </div>
         </div>
@@ -308,42 +332,60 @@
         class="row"
         style="margin-top: 30px"
       >
-        <div class="col-md-4 py-3 py-md-0">
-          <div class="card">
+        <div class="col-md-4 py-3 py-md-0" data-aos="flip-left" data-aos-duration="500" data-aos-delay="100">
+          <div class="card" data-nama="Gorengan"
+          data-harga="1000"
+          data-gambar="https://asset.kompas.com/crops/VSdX_U1CFkOPeYtm4CXERJvD9to=/100x67:900x600/750x500/data/photo/2023/04/01/6427b71555180.jpg">
             <img
               src="https://asset.kompas.com/crops/VSdX_U1CFkOPeYtm4CXERJvD9to=/100x67:900x600/750x500/data/photo/2023/04/01/6427b71555180.jpg"
-              alt="rujak cingur"
+              alt="Gorengan"
             />
             <div class="card-img-overlay">
               <h3>Gorengan</h3>
               <p>Aneka gorengan sebagai pelengkap rujak</p>
-              <button id="tombol">Pesan</button>
+              <button id="tombol"  
+              class="pesan-button"
+              type="button"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal">Pesan</button>
             </div>
           </div>
         </div>
-        <div class="col-md-4 py-3 py-md-0">
-          <div class="card">
+        <div class="col-md-4 py-3 py-md-0" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="200">
+          <div class="card" data-nama="Kerupuk Putih"
+          data-harga="1000"
+          data-gambar="https://asset.kompas.com/crops/O_Vgje1nMEqUCaDexq2UJdbyT14=/9x1:989x655/750x500/data/photo/2020/02/21/5e5008d10c825.jpg">
             <img
               src="https://asset.kompas.com/crops/O_Vgje1nMEqUCaDexq2UJdbyT14=/9x1:989x655/750x500/data/photo/2020/02/21/5e5008d10c825.jpg"
-              alt="rujak cingur"
+              alt="Kerupuk Putih"
             />
             <div class="card-img-overlay">
               <h3>Kerupuk Putih</h3>
               <p>Kerupuk Putih sebagai Pelengkap rujak anda</p>
-              <button id="tombol">Pesan</button>
+              <button id="tombol" 
+              class="pesan-button"
+              type="button"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal">Pesan</button>
             </div>
           </div>
         </div>
-        <div class="col-md-4 py-3 py-md-0">
-          <div class="card">
+        <div class="col-md-4 py-3 py-md-0" data-aos="flip-left" data-aos-duration="1500" data-aos-delay="250">
+          <div class="card" data-nama="Minuman Segar"
+          data-harga="3000"
+          data-gambar="https://img.freepik.com/free-photo/delicious-bubble-tea-drinks-assortment_23-2149870684.jpg?w=826&t=st=1697094845~exp=1697095445~hmac=9d68f7cbd40709db91d24a60cd0b92a9b29eccf4018121950b734f80b02e2fed">
             <img
               src="https://img.freepik.com/free-photo/delicious-bubble-tea-drinks-assortment_23-2149870684.jpg?w=826&t=st=1697094845~exp=1697095445~hmac=9d68f7cbd40709db91d24a60cd0b92a9b29eccf4018121950b734f80b02e2fed"
-              alt="rujak cingur"
+              alt="Minuman Segar"
             />
             <div class="card-img-overlay">
               <h3>Minuman Segar</h3>
               <p>Aneka minuman segar</p>
-              <button id="tombol">Pesan</button>
+              <button id="tombol" 
+              class="pesan-button"
+              type="button"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal">Pesan</button>
             </div>
           </div>
         </div>
@@ -361,11 +403,16 @@
         class="row"
         style="margin-top: 30px"
       >
-        <div class="col-md-3 py-3 py-md-0">
-          <div class="card">
+        <div class="col-md-3 py-3 py-md-0 animasi">
+          <div
+            class="card"
+            data-nama="Rujak Mie Palembang"
+            data-harga="20000"
+            data-gambar="https://www.indonesia.travel/content/dam/indtravelrevamp/en/trip-ideas/indonesian-rujak/2.jpg"
+          >
             <img
               src="https://www.indonesia.travel/content/dam/indtravelrevamp/en/trip-ideas/indonesian-rujak/2.jpg"
-              alt="rujak cingur"
+              alt="Rujak Mie"
             />
             <div class="card-body">
               <h3>Rujak Mie</h3>
@@ -374,45 +421,80 @@
                 Rp20.000
                 <span
                   id="openCartModal"
+                  class="pesan-button"
+                  type="button"
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal"
                   style="cursor: pointer"
                   ><i class="bi bi-cart3"></i
-                ></span>
+                > Pesan</span>
               </h5>
             </div>
           </div>
         </div>
-        <div class="col-md-3 py-3 py-md-0">
-          <div class="card">
+        <div class="col-md-3 py-3 py-md-0 animasi" >
+          <div
+            class="card"
+            data-nama="Rujak Es Krim"
+            data-harga="20000"
+            data-gambar="https://www.indonesia.travel/content/dam/indtravelrevamp/en/trip-ideas/indonesian-rujak/4.jpg"
+          >
             <img
               src="https://www.indonesia.travel/content/dam/indtravelrevamp/en/trip-ideas/indonesian-rujak/4.jpg"
-              alt="rujak cingur"
+              alt="Rujak Es Krim"
             />
             <div class="card-body">
               <h3>Rujak Es Krim</h3>
               <p>Rujak yang diberikan topping es krim</p>
               <h5>
-                Rp20.000 <span><i class="bi bi-cart3"></i></span>
+                Rp20.000
+                <span
+                  class="pesan-button"
+                  type="button"
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal"
+                  style="cursor: pointer"
+                  ><i class="bi bi-cart3"></i
+                > Pesan</span>
               </h5>
             </div>
           </div>
         </div>
-        <div class="col-md-3 py-3 py-md-0">
-          <div class="card">
+        <div class="col-md-3 py-3 py-md-0 animasi">
+          <div
+            class="card"
+            data-nama="Rujak Gobet"
+            data-harga="12000"
+            data-gambar="https://www.indonesia.travel/content/dam/indtravelrevamp/en/trip-ideas/indonesian-rujak/5.jpg"
+          >
             <img
               src="https://www.indonesia.travel/content/dam/indtravelrevamp/en/trip-ideas/indonesian-rujak/5.jpg"
-              alt="rujak cingur"
+              alt="Rujak Gobet"
             />
             <div class="card-body">
               <h3>Rujak Gobet</h3>
               <p>Rujak khas Malang terdiri dari macam buah-buahan</p>
               <h5>
-                Rp12.000 <span><i class="bi bi-cart3"></i></span>
+                Rp12.000
+                <span
+                  class="pesan-button"
+                  type="button"
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal"
+                  style="cursor: pointer"
+                  ><i class="bi bi-cart3"></i
+                > Pesan</span>
               </h5>
             </div>
           </div>
         </div>
-        <div class="col-md-3 py-3 py-md-0">
-          <div class="card">
+        <div class="col-md-3 py-3 py-md-0 animasi">
+          <div
+            class="card"
+            data-nama="Rujak Cingur"
+            data-harga="16000"
+            data-gambar="https://www.indonesia.travel/content/dam/indtravelrevamp/en/trip-ideas/indonesian-rujak/6.jpg"
+          >
             <img
               src="https://www.indonesia.travel/content/dam/indtravelrevamp/en/trip-ideas/indonesian-rujak/6.jpg"
               alt="rujak cingur"
@@ -421,7 +503,15 @@
               <h3>Rujak Cingur</h3>
               <p>Terbuat dari lidah sapi dan pelengpak lainnya</p>
               <h5>
-                Rp16.000 <span><i class="bi bi-cart3"></i></span>
+                Rp16.000
+                <span
+                  class="pesan-button"
+                  type="button"
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal"
+                  style="cursor: pointer"
+                  ><i class="bi bi-cart3"></i
+                > Pesan</span>
               </h5>
             </div>
           </div>
@@ -432,62 +522,114 @@
         class="row"
         style="margin-top: 30px"
       >
-        <div class="col-md-3 py-3 py-md-0">
-          <div class="card">
+        <div class="col-md-3 py-3 py-md-0 animasi">
+          <div
+            class="card"
+            data-nama="Rujak Soto"
+            data-harga="15000"
+            data-gambar="https://www.indonesia.travel/content/dam/indtravelrevamp/en/trip-ideas/indonesian-rujak/7.jpg"
+          >
             <img
               src="https://www.indonesia.travel/content/dam/indtravelrevamp/en/trip-ideas/indonesian-rujak/7.jpg"
-              alt="rujak cingur"
+              alt="Rujak Soto"
             />
             <div class="card-body">
               <h3>Rujak Soto</h3>
               <p>Isian Sayur rebus dengan kuah special</p>
               <h5>
-                Rp15.000 <span><i class="bi bi-cart3"></i></span>
+                Rp15.000
+                <span
+                  class="pesan-button"
+                  type="button"
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal"
+                  style="cursor: pointer"
+                  ><i class="bi bi-cart3"></i
+                > Pesan</span>
               </h5>
             </div>
           </div>
         </div>
-        <div class="col-md-3 py-3 py-md-0">
-          <div class="card">
+        <div class="col-md-3 py-3 py-md-0 animasi">
+          <div
+            class="card"
+            data-nama="Rujak Petis"
+            data-harga="15000"
+            data-gambar="https://www.indonesia.travel/content/dam/indtravelrevamp/en/trip-ideas/indonesian-rujak/8.jpg"
+          >
             <img
               src="https://www.indonesia.travel/content/dam/indtravelrevamp/en/trip-ideas/indonesian-rujak/8.jpg"
-              alt="rujak cingur"
+              alt="Rujak Petis"
             />
             <div class="card-body">
               <h3>Rujak Petis</h3>
               <p>buah dan sayuran disiram dengan kuah petis</p>
               <h5>
-                Rp15.000 <span><i class="bi bi-cart3"></i></span>
+                Rp15.000
+                <span
+                  class="pesan-button"
+                  type="button"
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal"
+                  style="cursor: pointer"
+                  ><i class="bi bi-cart3"></i
+                > Pesan</span>
               </h5>
             </div>
           </div>
         </div>
-        <div class="col-md-3 py-3 py-md-0">
-          <div class="card">
+        <div class="col-md-3 py-3 py-md-0 animasi">
+          <div
+            class="card"
+            data-nama="Rujak Kuah"
+            data-harga="15000"
+            data-gambar="https://www.indonesia.travel/content/dam/indtravelrevamp/en/trip-ideas/indonesian-rujak/9.jpg"
+          >
             <img
               src="https://www.indonesia.travel/content/dam/indtravelrevamp/en/trip-ideas/indonesian-rujak/9.jpg"
-              alt="rujak cingur"
+              alt="Rujak Kuah"
             />
             <div class="card-body">
               <h3>Rujak Kuah</h3>
               <p>Berbagai irisan buah dan disiram kuah pindang</p>
               <h5>
-                Rp10.000 <span><i class="bi bi-cart3"></i></span>
+                Rp10.000
+                <span
+                  class="pesan-button"
+                  type="button"
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal"
+                  style="cursor: pointer"
+                  ><i class="bi bi-cart3"></i
+                > Pesan</span>
               </h5>
             </div>
           </div>
         </div>
-        <div class="col-md-3 py-3 py-md-0">
-          <div class="card">
+        <div class="col-md-3 py-3 py-md-0 animasi">
+          <div
+            class="card"
+            data-nama="Rujak Terasi"
+            data-harga="15000"
+            data-gambar="https://www.indonesia.travel/content/dam/indtravelrevamp/en/trip-ideas/indonesian-rujak/11.jpg"
+          >
             <img
               src="https://www.indonesia.travel/content/dam/indtravelrevamp/en/trip-ideas/indonesian-rujak/11.jpg"
-              alt="rujak cingur"
+              alt="Rujak Terasi"
             />
             <div class="card-body">
               <h3>Rujak Terasi</h3>
               <p>Terasi dicampur cabai rawit dan irisan buah</p>
               <h5>
-                Rp35.000 <span><i class="bi bi-cart3"></i></span>
+                Rp15.000
+                <span
+                  class="pesan-button"
+                  type="button"
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal"
+                  style="cursor: pointer"
+                  ><i class="bi bi-cart3"></i
+                > Pesan</span>
               </h5>
             </div>
           </div>
@@ -497,7 +639,7 @@
     <!-- rujak -->
 
     <!-- Banner -->
-    <div class="banner">
+    <div class="banner container">
       <h1>MENU LAINNYA</h1>
       <div
         id="carouselExampleCaptions"
@@ -538,9 +680,10 @@
               alt="..."
             />
             <div class="carousel-overlay custom-caption">
-              <h3>Aneka Gorengan</h3>
-              <p>Banyak pilihan gorengan untuk snack pendamping rujak anda</p>
-              <button id="btnorder">Pesan</button>
+              <h3>Aneka Gorengan</h3> <br>
+              <p>Di restoran kami, kami menyediakan beragam pilihan gorengan <br>
+                yang lezat untuk memenuhi selera Anda.</p>
+              
             </div>
           </div>
           <div
@@ -554,9 +697,10 @@
               alt="..."
             />
             <div class="carousel-overlay custom-caption">
-              <h3>Aneka Minuman</h3>
-              <p>Tersedia banyak Pilihan minuman yang bisa anda pesan dan ada yang gratis</p>
-              <button id="btnorder">Pesan</button>
+              <h3>Aneka Minuman</h3> <br>
+              <p>Di restoran kami dengan senang hati menyediakan beragam <br>
+                minuman segar dan nikmat untuk menemani hidangan Anda.</p>
+              
             </div>
           </div>
           <div
@@ -570,9 +714,9 @@
               alt="..."
             />
             <div class="carousel-overlay custom-caption">
-              <h3>Aneka Kerupuk</h3>
-              <p>Tersedia Berbagai macam kerupuk untuk pendamping makan rujak</p>
-              <button id="btnorder">Pesan</button>
+              <h3>Aneka Kerupuk</h3> <br>
+              <p>Restoran kami menyediakan berbagai jenis kerupuk <br>
+                yang gurih dan renyah untuk menemani hidangan Anda.</p>
             </div>
           </div>
         </div>
@@ -650,8 +794,13 @@
         style="margin-top: 30px"
         id="gorengan"
       >
-        <div class="col-md-3 py-3 py-md-0">
-          <div class="card">
+        <div class="col-md-3 py-3 py-md-0 animasi">
+          <div
+            class="card"
+            data-nama="Bakwan Sayur"
+            data-harga="1000"
+            data-gambar="https://asset.kompas.com/crops/Ytp40vHgwRdQ37YeuiTNXGnJQJY=/0x0:1000x667/750x500/data/photo/2023/06/13/6487fc3a3c5ef.jpg"
+          >
             <img
               src="https://asset.kompas.com/crops/Ytp40vHgwRdQ37YeuiTNXGnJQJY=/0x0:1000x667/750x500/data/photo/2023/06/13/6487fc3a3c5ef.jpg"
               alt="Bakwan Sayur "
@@ -660,13 +809,25 @@
               <h3>Bakwan Sayur</h3>
               <p>olahan tepung terigu yang dicampur dengan sayur</p>
               <h5>
-                Rp1000/pcs<span><i class="bi bi-cart3"></i></span>
+                Rp1000<span
+                  class="pesan-button"
+                  type="button"
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal"
+                  style="cursor: pointer"
+                  ><i class="bi bi-cart3"></i
+                > Pesan</span>
               </h5>
             </div>
           </div>
         </div>
-        <div class="col-md-3 py-3 py-md-0">
-          <div class="card">
+        <div class="col-md-3 py-3 py-md-0 animasi">
+          <div
+            class="card"
+            data-nama="Tahu Isi"
+            data-harga="1000"
+            data-gambar="https://www.goodnewsfromindonesia.id/uploads/images/2022/11/2118232022-tahu-isi-ayam-sayur-Besar.jpg"
+          >
             <img
               src="https://www.goodnewsfromindonesia.id/uploads/images/2022/11/2118232022-tahu-isi-ayam-sayur-Besar.jpg"
               alt="Tahu Isi"
@@ -675,13 +836,25 @@
               <h3>Tahu Isi</h3>
               <p>Tahu dengan isian sayur, isian bihun dan isian daging</p>
               <h5>
-                Rp1000/pcs<span><i class="bi bi-cart3"></i></span>
+                Rp1000<span
+                  class="pesan-button"
+                  type="button"
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal"
+                  style="cursor: pointer"
+                  ><i class="bi bi-cart3"></i
+                > Pesan</span>
               </h5>
             </div>
           </div>
         </div>
-        <div class="col-md-3 py-3 py-md-0">
-          <div class="card">
+        <div class="col-md-3 py-3 py-md-0 animasi">
+          <div
+            class="card"
+            data-nama="Tahu Pong"
+            data-harga="500"
+            data-gambar="https://www.goodnewsfromindonesia.id/uploads/images/2022/11/2118252022-tahu-pong.jpg"
+          >
             <img
               src="https://www.goodnewsfromindonesia.id/uploads/images/2022/11/2118252022-tahu-pong.jpg"
               alt="Tahu Pong"
@@ -690,22 +863,43 @@
               <h3>Tahu Pong</h3>
               <p>Tahu tanpa isian yang renyah dan gurih</p>
               <h5>
-                Rp500/pcs <span><i class="bi bi-cart3"></i></span>
+                Rp500
+                <span
+                  class="pesan-button"
+                  type="button"
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal"
+                  style="cursor: pointer"
+                  ><i class="bi bi-cart3"></i
+                > Pesan</span>
               </h5>
             </div>
           </div>
         </div>
-        <div class="col-md-3 py-3 py-md-0">
-          <div class="card">
+        <div class="col-md-3 py-3 py-md-0 animasi">
+          <div
+            class="card"
+            data-nama="Mendoan"
+            data-harga="1000"
+            data-gambar="https://asset.kompas.com/crops/7s1zIClbCexXibeqFVyVVgoWZGw=/4x2:972x648/750x500/data/photo/2022/09/21/632aa5001639f.jpg"
+          >
             <img
               src="https://asset.kompas.com/crops/7s1zIClbCexXibeqFVyVVgoWZGw=/4x2:972x648/750x500/data/photo/2022/09/21/632aa5001639f.jpg"
-              alt="rujak cingur"
+              alt="Mendoan"
             />
             <div class="card-body">
               <h3>Mendoan</h3>
               <p>Mendoan adalah gorengan tempe dibalut tepung</p>
               <h5>
-                Rp1000/pcs <span><i class="bi bi-cart3"></i></span>
+                Rp1000
+                <span
+                  class="pesan-button"
+                  type="button"
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal"
+                  style="cursor: pointer"
+                  ><i class="bi bi-cart3"></i
+                > Pesan</span>
               </h5>
             </div>
           </div>
@@ -718,8 +912,13 @@
         style="margin-top: 30px"
         id="kerupuk"
       >
-        <div class="col-md-3 py-3 py-md-0">
-          <div class="card">
+        <div class="col-md-3 py-3 py-md-0 animasi">
+          <div
+            class="card"
+            data-nama="Kerupuk Putih"
+            data-harga="1000"
+            data-gambar="https://asset.kompas.com/crops/O_Vgje1nMEqUCaDexq2UJdbyT14=/9x1:989x655/750x500/data/photo/2020/02/21/5e5008d10c825.jpg"
+          >
             <img
               src="https://asset.kompas.com/crops/O_Vgje1nMEqUCaDexq2UJdbyT14=/9x1:989x655/750x500/data/photo/2020/02/21/5e5008d10c825.jpg"
               alt="kerupuk putih"
@@ -728,28 +927,52 @@
               <h3>Kerupuk Putih</h3>
               <p>“kerupuk legend” karena hampir tempat makan ada</p>
               <h5>
-                Rp1000/pcs<span><i class="bi bi-cart3"></i></span>
+                Rp1000<span
+                  class="pesan-button"
+                  type="button"
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal"
+                  style="cursor: pointer"
+                  ><i class="bi bi-cart3"></i
+                > Pesan</span>
               </h5>
             </div>
           </div>
         </div>
-        <div class="col-md-3 py-3 py-md-0">
-          <div class="card">
+        <div class="col-md-3 py-3 py-md-0 animasi">
+          <div
+            class="card"
+            data-nama="Krupuk udang"
+            data-harga="1000"
+            data-gambar="https://blue.kumparan.com/image/upload/fl_progressive,fl_lossy,c_fill,q_auto:best,w_640/v1634025439/01813d7237d0df40bb9ddc2eb2633df6.jpg"
+          >
             <img
               src="https://blue.kumparan.com/image/upload/fl_progressive,fl_lossy,c_fill,q_auto:best,w_640/v1634025439/01813d7237d0df40bb9ddc2eb2633df6.jpg"
-              alt=" Kerupuk udang"
+              alt="Kerupuk udang"
             />
             <div class="card-body">
               <h3>Krupuk udang</h3>
               <p>Kerupuk dengan adonan tepung tapioka dan udang</p>
               <h5>
-                Rp1000/bks<span><i class="bi bi-cart3"></i></span>
+                Rp1000<span
+                  class="pesan-button"
+                  type="button"
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal"
+                  style="cursor: pointer"
+                  ><i class="bi bi-cart3"></i
+                > Pesan</span>
               </h5>
             </div>
           </div>
         </div>
-        <div class="col-md-3 py-3 py-md-0">
-          <div class="card">
+        <div class="col-md-3 py-3 py-md-0 animasi">
+          <div
+            class="card"
+            data-nama="Rempeyek"
+            data-harga="1000"
+            data-gambar="https://img.freepik.com/premium-photo/peyek-rempeyek-is-traditional-savoury-javanese-cracker-made-from-rice-flour-topped-with-peanut_431906-3142.jpg?size=626&ext=jpg&ga=GA1.1.323005867.1694434648&semt=sph"
+          >
             <img
               src="https://img.freepik.com/premium-photo/peyek-rempeyek-is-traditional-savoury-javanese-cracker-made-from-rice-flour-topped-with-peanut_431906-3142.jpg?size=626&ext=jpg&ga=GA1.1.323005867.1694434648&semt=sph"
               alt="Rempeyek"
@@ -758,13 +981,26 @@
               <h3>Rempeyek</h3>
               <p>Banyak pilihan Toping teri, kacang, dan udang</p>
               <h5>
-                Rp1000/bks <span><i class="bi bi-cart3"></i></span>
+                Rp1000
+                <span
+                  class="pesan-button"
+                  type="button"
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal"
+                  style="cursor: pointer"
+                  ><i class="bi bi-cart3"></i
+                > Pesan</span>
               </h5>
             </div>
           </div>
         </div>
-        <div class="col-md-3 py-3 py-md-0">
-          <div class="card">
+        <div class="col-md-3 py-3 py-md-0 animasi">
+          <div
+            class="card"
+            data-nama="Kerupuk Kulit"
+            data-harga="1000"
+            data-gambar="https://asset.kompas.com/crops/ivYQHrT2rAtn5fhTaIkjCJ_DU1M=/69x42:949x629/750x500/data/photo/2022/05/27/6290497e9062a.jpg"
+          >
             <img
               src="https://asset.kompas.com/crops/ivYQHrT2rAtn5fhTaIkjCJ_DU1M=/69x42:949x629/750x500/data/photo/2022/05/27/6290497e9062a.jpg"
               alt="Kerupuk Kulit"
@@ -773,7 +1009,15 @@
               <h3>Kerupuk Kulit</h3>
               <p>Kerupuk yang Terbuat dari kulit sapi dan kerbau</p>
               <h5>
-                Rp1000/bks <span><i class="bi bi-cart3"></i></span>
+                Rp1000
+                <span
+                  class="pesan-button"
+                  type="button"
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal"
+                  style="cursor: pointer"
+                  ><i class="bi bi-cart3"></i
+                > Pesan</span>
               </h5>
             </div>
           </div>
@@ -786,8 +1030,13 @@
         style="margin-top: 30px"
         id="minuman"
       >
-        <div class="col-md-3 py-3 py-md-0">
-          <div class="card">
+        <div class="col-md-3 py-3 py-md-0 animasi">
+          <div
+            class="card"
+            data-nama="Minuman"
+            data-harga="4000"
+            data-gambar="https://static.promediateknologi.id/crop/4x282:717x904/750x500/webp/photo/2023/06/09/Screenshot_2023-06-09-20-56-19-81-572693153.png"
+          >
             <img
               src="https://static.promediateknologi.id/crop/4x282:717x904/750x500/webp/photo/2023/06/09/Screenshot_2023-06-09-20-56-19-81-572693153.png"
               alt="minuman"
@@ -796,13 +1045,25 @@
               <h3>Minuman</h3>
               <p>Aneka minuman teh kemasan botol dingin</p>
               <h5>
-                Rp3000 - Rp6000<span><i class="bi bi-cart3"></i></span>
+                Rp4000<span
+                  class="pesan-button"
+                  type="button"
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal"
+                  style="cursor: pointer"
+                  ><i class="bi bi-cart3"></i
+                > Pesan</span>
               </h5>
             </div>
           </div>
         </div>
-        <div class="col-md-3 py-3 py-md-0">
-          <div class="card">
+        <div class="col-md-3 py-3 py-md-0 animasi">
+          <div
+            class="card"
+            data-nama="Air mineral"
+            data-harga="5000"
+            data-gambar="https://asset-a.grid.id/crop/0x0:0x0/x/photo/2021/02/20/botol-plastikjpg-20210220065152.jpg"
+          >
             <img
               src="https://asset-a.grid.id/crop/0x0:0x0/x/photo/2021/02/20/botol-plastikjpg-20210220065152.jpg"
               alt="air mineral"
@@ -811,13 +1072,25 @@
               <h3>Air mineral</h3>
               <p>Tersedia berbagai ukuran dan merek</p>
               <h5>
-                Rp3000 - Rp6000<span><i class="bi bi-cart3"></i></span>
+                Rp5000<span
+                  class="pesan-button"
+                  type="button"
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal"
+                  style="cursor: pointer"
+                  ><i class="bi bi-cart3"></i
+                > Pesan</span>
               </h5>
             </div>
           </div>
         </div>
-        <div class="col-md-3 py-3 py-md-0">
-          <div class="card">
+        <div class="col-md-3 py-3 py-md-0 animasi">
+          <div
+            class="card"
+            data-nama="Es Kopi"
+            data-harga="3000"
+            data-gambar="https://asset.kompas.com/crops/fO-V0-C-V3BQ50xgKm_iwROeWSE=/34x24:475x318/750x500/data/photo/2021/08/05/610b6ce6b3440.jpg"
+          >
             <img
               src="https://asset.kompas.com/crops/fO-V0-C-V3BQ50xgKm_iwROeWSE=/34x24:475x318/750x500/data/photo/2021/08/05/610b6ce6b3440.jpg"
               alt="es kopi"
@@ -826,13 +1099,26 @@
               <h3>Es Kopi</h3>
               <p>Bebas request es kopi atau kopi panas</p>
               <h5>
-                Rp3000/bks <span><i class="bi bi-cart3"></i></span>
+                Rp3000
+                <span
+                  class="pesan-button"
+                  type="button"
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal"
+                  style="cursor: pointer"
+                  ><i class="bi bi-cart3"></i
+                > Pesan</span>
               </h5>
             </div>
           </div>
         </div>
-        <div class="col-md-3 py-3 py-md-0">
-          <div class="card">
+        <div class="col-md-3 py-3 py-md-0 animasi">
+          <div
+            class="card"
+            data-nama="Es Timun"
+            data-harga="6000"
+            data-gambar="https://asset.kompas.com/crops/ntMzZRUMKnFSzP_yG5A9XKzF8sg=/0x1417:3376x3668/750x500/data/photo/2022/04/26/62674990aa6ac.jpg"
+          >
             <img
               src="https://asset.kompas.com/crops/ntMzZRUMKnFSzP_yG5A9XKzF8sg=/0x1417:3376x3668/750x500/data/photo/2022/04/26/62674990aa6ac.jpg"
               alt="es timun"
@@ -841,7 +1127,15 @@
               <h3>Es Timun</h3>
               <p>Minuman Segar terbuat dari timun dan bahan lainya</p>
               <h5>
-                Rp8000/bks <span><i class="bi bi-cart3"></i></span>
+                Rp6000
+                <span
+                  class="pesan-button"
+                  type="button"
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal"
+                  style="cursor: pointer"
+                  ><i class="bi bi-cart3"></i
+                > Pesan</span>
               </h5>
             </div>
           </div>
@@ -1007,6 +1301,7 @@
                       class="form-control"
                       id="examplenama"
                       aria-describedby="emailHelp"
+                      required
                     />
                   </div>
                   <div class="mb-3">
@@ -1015,6 +1310,7 @@
                       placeholder="No.Telp"
                       class="form-control"
                       id="exampletelp"
+                      required
                     />
                   </div>
                   <div class="mb-3">
@@ -1023,14 +1319,11 @@
                       placeholder="Masukkan alamat anda"
                       id="examplealamat"
                       rows="3"
+                      required
                     ></textarea>
                   </div>
                   <div class="mb-3">
-                    <label
-                      for="examplequantity"
-                      class="form-label"
-                      >Quantity Pesanan</label
-                    >
+                    <label class="form-label">Quantity Pesanan</label>
                     <div
                       class="input-group"
                       style="width: 200px"
@@ -1047,6 +1340,7 @@
                         class="form-control text-center"
                         id="examplequantity"
                         value="0"
+                        required
                       />
                       <button
                         class="btn btn-outline-secondary"
@@ -1066,7 +1360,7 @@
                     ></textarea>
                   </div>
                   <div class="mb-3">
-                    <label for="">Total Harga</label>
+                    <label>Total Harga</label>
                     <h3
                       class="mt-2"
                       id="modal-harga-produk"
@@ -1079,16 +1373,51 @@
           <div class="modal-footer">
             <button
               type="button"
-              class="btn btn-secondary"
+              class="btn btn-danger"
               data-bs-dismiss="modal"
             >
-              Close
+              Batal
             </button>
+            <button
+              id="pesanSekarangBtn"
+              type="button"
+              class="btn btn-primary"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+            >
+              Pesan Sekarang
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- alert -->
+    <div
+      id="popup"
+      class="modal"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Alert</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p id="popupMessage"></p>
+          </div>
+          <div class="modal-footer">
             <button
               type="button"
               class="btn btn-primary"
+              data-bs-dismiss="modal"
             >
-              Save changes
+              OK
             </button>
           </div>
         </div>
@@ -1110,5 +1439,19 @@
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
+
+    <!-- Aos animasi -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      const animasi =document.querySelectorAll('.animasi');
+
+      animasi.forEach((card, i)=>{
+        card.dataset.aos ='fade-down';
+        card.dataset.aosDelay=i *50;
+      })
+      AOS.init({
+        once: true
+      });
+    </script>
   </body>
 </html>
