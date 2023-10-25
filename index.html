@@ -1175,9 +1175,9 @@
           <h3>INFO</h3>
           <p>Hubungi kami melalui no telp atau email. Selain itu anda dapat berkunjung ke resto kami</p>
           <i class="bi bi-telephone-fill"> <span>+62xxx-xxxx-xxxx</span></i
-          ><br /><br />
+          ><br /> <br>
           <i class="bi bi-envelope-at-fill"> <span>rujaknusantara@gmail.com</span></i
-          ><br /><br />
+          ><br /> <br>
           <i class="bi bi-geo-alt-fill"> <span>Malang Indonesia</span></i
           ><br />
         </div>
@@ -1293,7 +1293,7 @@
                 </div>
               </div>
               <div class="col-md-6 py-3 py-md-0">
-                <form>
+                <form id="myForm">
                   <div class="mb-3">
                     <input
                       type="text"
@@ -1303,6 +1303,7 @@
                       aria-describedby="emailHelp"
                       required
                     />
+                    <div id="namaValidation" class="form-text text-danger"></div>
                   </div>
                   <div class="mb-3">
                     <input
@@ -1316,6 +1317,7 @@
                   <div class="mb-3">
                     <textarea
                       class="form-control"
+                      type="text"
                       placeholder="Masukkan alamat anda"
                       id="examplealamat"
                       rows="3"
@@ -1356,7 +1358,7 @@
                       class="form-control"
                       placeholder="Catatan untuk Restoran"
                       id="examplecatatan"
-                      rows="3"
+                      rows="3" type="text"
                     ></textarea>
                   </div>
                   <div class="mb-3">
@@ -1366,27 +1368,24 @@
                       id="modal-harga-produk"
                     ></h3>
                   </div>
+                  <button
+                  id="pesanSekarangBtn"
+                  type="submit"
+                  class="btn btn-primary"
+                  
+                >
+                  Pesan Sekarang
+                </button>
+                    <button
+                    type="button"
+                    class="btn btn-danger"
+                    data-bs-dismiss="modal"
+                  >
+                    Batal
+                  </button>
                 </form>
               </div>
             </div>
-          </div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-danger"
-              data-bs-dismiss="modal"
-            >
-              Batal
-            </button>
-            <button
-              id="pesanSekarangBtn"
-              type="button"
-              class="btn btn-primary"
-              data-bs-toggle="modal"
-              data-bs-target="#exampleModal"
-            >
-              Pesan Sekarang
-            </button>
           </div>
         </div>
       </div>
@@ -1394,35 +1393,36 @@
 
     <!-- alert -->
     <div
-      id="popup"
-      class="modal"
-    >
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title">Alert</h5>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="modal-body">
-            <p id="popupMessage"></p>
-          </div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-primary"
-              data-bs-dismiss="modal"
-            >
-              OK
-            </button>
-          </div>
+    id="popup"
+    class="modal"
+  >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Alert</h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body">
+          <p id="popupMessage"></p>
+        </div>
+        <div class="modal-footer">
+          <button
+            type="button"
+            class="btn btn-primary"
+            data-bs-dismiss="modal"
+          >
+            OK
+          </button>
         </div>
       </div>
     </div>
+  </div>
+
 
     <!-- arrow -->
     <a

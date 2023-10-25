@@ -82,22 +82,30 @@ pesanButtons.forEach((button) => {
 // Alert success
 document.addEventListener('DOMContentLoaded', function () {
   const pesanSekarangBtn = document.getElementById('pesanSekarangBtn');
-  const popupMessage = document.getElementById('popupMessage');
   const namaInput = document.getElementById('examplenama');
   const telpInput = document.getElementById('exampletelp');
   const alamatTextarea = document.getElementById('examplealamat');
   const quantityInput = document.getElementById('examplequantity');
+  const pesanErrorModal = new bootstrap.Modal(document.getElementById('exampleModal'));
+  const pesanSuccessModal = new bootstrap.Modal(document.getElementById('popup'));
 
   pesanSekarangBtn.addEventListener('click', function () {
     if (namaInput.value && telpInput.value && alamatTextarea.value && quantityInput.value > 0) {
       // Set pesan yang akan ditampilkan pada jendela pop-up
+      const popupMessage = document.getElementById('popupMessage');
       popupMessage.textContent = 'Pesanan Anda Segera kami Proses! Tunggu Pesanan Anda sampai';
 
-      // Tampilkan jendela pop-up
-      const popup = new bootstrap.Modal(document.getElementById('popup'));
-      popup.show();
-    } else {
-      alert('Harap isi semua elemen formulir terlebih dahulu!');
+      // Sembunyikan modal pemesanan
+      pesanErrorModal.hide();
+
+      // Tampilkan modal pesan sukses
+      pesanSuccessModal.show();
+
+      // Kosongkan nilai formulir
+      namaInput.value = '';
+      telpInput.value = '';
+      alamatTextarea.value = '';
+      quantityInput.value = '';
     }
   });
 });
